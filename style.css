@@ -55,13 +55,18 @@ section {
 /* navbar syles */
 /* navbar syles */
 
-
+header {
+    background-image: url(./images/developer.png), url(./images/header_bg.png);
+    background-repeat: no-repeat;
+    background-position: left, bottom right;
+    background-size: auto, auto 470px;
+}
 
 .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 230px;
+    padding: 20px 230px;
 }
 
 .nav-title {
@@ -72,15 +77,13 @@ section {
 }
 
 .nav-item-container {
+    display: flex;
     align-items: center;
+    padding-left: 0px;
 }
 
 .span-item {
     color: #FD6E0A;
-}
-
-.nav-item-container {
-    display: flex;
 }
 
 ul li {
@@ -99,7 +102,7 @@ ul li a {
 
 .banner-container {
     display: flex;
-    padding: 50px 35px 0px 230px;
+    padding: 80px 35px 0px 230px;
     align-items: center;
     gap: 150px;
 }
@@ -167,7 +170,44 @@ main {
 }
 
 
+/* what i do section styles */
+/* what i do section styles */
+.i-do-content {
+    padding: 0 130px 0 130px;
+    text-align: center;
+}
 
+.i-do-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.i-do-des {
+    font-family: 18px;
+}
+
+/* i do card style */
+
+.do-card-container {
+    display: flex;
+    gap: 24px;
+    margin-top: 50px;
+}
+
+.card-container {
+    box-shadow: 0 6px 50px 0 rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hide {
+    display: none;
+}
 
 
 /* media query */
@@ -180,19 +220,27 @@ main {
     .nav-bar,
     .banner-container,
     .about-section-container,
-    .about-info-container {
+    .about-info-container,
+    .card-container,
+    .do-card-container {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+    }
+
+    header {
+        background-image: none;
     }
 
     .nav-bar,
     .banner-container,
-    .about-section-container {
+    .about-section-container,
+    .i-do-content {
         padding: 40px 20px;
     }
 
     .banner-container {
         gap: 50px;
+        padding-bottom: 0px;
     }
 
     ul .btn-primary {
@@ -227,13 +275,23 @@ main {
         flex-direction: column;
     }
 
+    header {
+        background-image: none;
+    }
+
+    .do-card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 50px;
+    }
+
     .about-section-container {
         padding: 50px 80px;
     }
 
     .nav-bar,
     .banner-container {
-        padding: 40px 20px;
+        padding: 40px 20px 0px 20px;
         text-align: center;
     }
 
