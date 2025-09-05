@@ -205,8 +205,17 @@ main {
     font-weight: 700;
 }
 
-.hide {
-    display: none;
+/* resume summary section syles */
+
+.resume {
+    font-size: 35;
+    font-weight: 700;
+    text-align: center;
+}
+
+.resume-container {
+    display: flex;
+    gap: 50px;
 }
 
 
@@ -222,13 +231,20 @@ main {
     .about-section-container,
     .about-info-container,
     .card-container,
-    .do-card-container {
+    .do-card-container,
+    .resume-container {
         flex-direction: column;
         align-items: center;
     }
 
     header {
         background-image: none;
+    }
+
+    .resume-container {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .nav-bar,
@@ -266,6 +282,7 @@ main {
 }
 
 
+
 @media screen and (min-width:576px) and (max-width:1024px) {
 
     .nav-bar,
@@ -277,6 +294,11 @@ main {
 
     header {
         background-image: none;
+    }
+
+    .resume-container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .do-card-container {
